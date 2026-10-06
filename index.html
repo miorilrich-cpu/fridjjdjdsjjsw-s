@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miori Shop - ของน่ารัก ของใช้ สินค้าไลฟ์สไตล์</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Font (Prompt) -->
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Prompt', sans-serif;
+            background-color: #fff5f7;
+        }
+    </style>
+</head>
+<body class="text-gray-700">
+
+    <!-- Navbar -->
+    <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-pink-100 px-6 py-4 flex justify-between items-center shadow-sm">
+        <div class="flex items-center space-x-3">
+            <div class="w-10 h-10 bg-pink-100 rounded-full flex items-center justify-center text-xl">🐰</div>
+            <div>
+                <h1 class="text-xl font-bold text-pink-500 tracking-wide">Miori Shop 🎀</h1>
+                <p class="text-xs text-gray-400">ของน่ารัก • ของใช้ • สินค้าไลฟ์สไตล์</p>
+            </div>
+        </div>
+        <div class="flex items-center space-x-6 text-pink-500 text-lg">
+            <button class="hover:text-pink-600">🔍</button>
+            <div class="relative">
+                <button class="hover:text-pink-600">🛒</button>
+                <span class="absolute -top-2 -right-2 bg-pink-500 text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center">0</span>
+            </div>
+            <button class="hover:text-pink-600">☰</button>
+        </div>
+    </header>
+
+    <!-- Main Container (16:9 Aspect Ratio feel & max-width container) -->
+    <main class="max-w-5xl mx-auto px-4 py-6">
+
+        <!-- Banner Section (Ratio 1122 x 495) -->
+        <section class="w-full rounded-2xl overflow-hidden shadow-md mb-6 bg-pink-200 relative flex items-center justify-between px-8 py-10" style="aspect-ratio: 1122 / 495;">
+            <!-- Background pattern or soft overlay -->
+            <div class="absolute inset-0 bg-gradient-to-r from-pink-200 via-pink-100 to-pink-200 opacity-90"></div>
+            
+            <!-- Left Bunny Illustration -->
+            <div class="relative z-10 flex items-center space-x-4">
+                <div class="bg-white/80 p-4 rounded-3xl shadow-inner flex flex-col items-center">
+                    <span class="text-6xl">🐰</span>
+                    <span class="text-pink-400 text-sm mt-1">💖</span>
+                </div>
+                <div class="text-pink-900">
+                    <h2 class="text-3xl font-extrabold tracking-wide drop-shadow-sm">Miori Shop</h2>
+                    <p class="text-sm font-medium text-pink-700 mt-1">ของน่ารักๆ ที่ทำให้วันของคุณพิเศษขึ้น ✨</p>
+                </div>
+            </div>
+
+            <!-- Right Box Note -->
+            <div class="relative z-10 bg-white/70 backdrop-blur-sm px-6 py-4 rounded-2xl shadow-sm border border-white text-center">
+                <p class="text-pink-600 font-medium text-sm">ช้อปของน่ารัก<br>ได้ที่นี่เลย</p>
+                <span class="text-xl">🧸</span>
+            </div>
+        </section>
+
+        <!-- Category Filter Buttons -->
+        <div class="flex items-center space-x-3 overflow-x-auto pb-4 mb-6 scrollbar-none">
+            <button class="bg-pink-400 text-white px-5 py-2 rounded-full text-sm font-medium shadow-sm flex items-center space-x-1 shrink-0">
+                <span>🌸</span> <span>ทั้งหมด</span>
+            </button>
+            <button class="bg-white text-gray-600 hover:bg-pink-50 px-5 py-2 rounded-full text-sm font-medium border border-pink-100 flex items-center space-x-1 shrink-0">
+                <span>✏️</span> <span>เครื่องเขียน</span>
+            </button>
+            <button class="bg-white text-gray-600 hover:bg-pink-50 px-5 py-2 rounded-full text-sm font-medium border border-pink-100 flex items-center space-x-1 shrink-0">
+                <span>🏠</span> <span>ของใช้ในบ้าน</span>
+            </button>
+            <button class="bg-white text-gray-600 hover:bg-pink-50 px-5 py-2 rounded-full text-sm font-medium border border-pink-100 flex items-center space-x-1 shrink-0">
+                <span>🧸</span> <span>ของตกแต่ง</span>
+            </button>
+            <button class="bg-white text-gray-600 hover:bg-pink-50 px-5 py-2 rounded-full text-sm font-medium border border-pink-100 flex items-center space-x-1 shrink-0">
+                <span>👕</span> <span>เสื้อผ้า</span>
+            </button>
+            <button class="bg-white text-gray-600 hover:bg-pink-50 px-5 py-2 rounded-full text-sm font-medium border border-pink-100 shrink-0">
+                ... อื่นๆ
+            </button>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="relative mb-8">
+            <input type="text" placeholder="ค้นหาสินค้า..." class="w-full bg-white border border-pink-200 rounded-full py-2.5 pl-5 pr-12 text-sm focus:outline-none focus:ring-2 focus:ring-pink-300 shadow-sm">
+            <button class="absolute right-4 top-2.5 text-gray-400 hover:text-pink-500">🔍</button>
+        </div>
+
+        <!-- Product Section Header -->
+        <div class="flex justify-between items-center mb-4">
+            <h3 class="font-bold text-lg text-pink-500 flex items-center space-x-2">
+                <span>💖</span> <span>สินค้าทั้งหมด <span class="text-xs text-gray-400 font-normal">(8 รายการ)</span></span>
+            </h3>
+        </div>
+
+        <!-- Product Grid (2 columns layout matching the image) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+            <!-- Product Item 1 -->
+            <div class="bg-white rounded-2xl p-4 border border-pink-100 shadow-sm relative flex flex-col justify-between">
+                <button class="absolute top-4 right-4 text-pink-300 hover:text-pink-500 bg-white/80 p-1.5 rounded-full shadow-sm">🤍</button>
+                <div>
+                    <div class="bg-pink-50 rounded-xl h-48 mb-3 flex items-center justify-center text-4xl overflow-hidden">
+                        📔
+                    </div>
+                    <span class="text-[11px] bg-pink-100 text-pink-600 px-2.5 py-1 rounded-md font-medium">เครื่องเขียน</span>
+                    <h4 class="font-medium text-gray-800 text-sm mt-2">สมุดโน้ตลายน้องกระต่าย</h4>
+                    <p class="text-pink-500 font-bold mt-1">฿ 59</p>
+                </div>
+                <div class="flex items-center justify-between mt-4 pt-3 border-t border-gray-100">
+                    <div class="flex items-center border border-gray-200 rounded-lg overflow-hidden text-sm">
+                        <button class="px-2.5 py-1 bg-gray-50 text-gray-500 hover:bg-gray-100">-</button>
+                        <span class="px-3 py-1 text-gray-700">1</span>
+                        <button class="px-2.5 py-1 bg-gray-50 text-gray-500 hover:bg-gray-100">+</button>
+                    </div>
+                    <button class="bg-pink-400 hover:bg-pink-500 text-white text-xs px-4 py-2 rounded-xl flex items-center space-x-1 shadow-sm">
+                        <span>🛒</span> <span>เพิ่มใส่ตะกร้า</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product Item 2 -->
+            <div class="bg-white rounded-2xl p-4 border border-pink-100 shadow-sm relative flex flex-col justify-between">
+                <button class="absolute top-4 right-4 text-pink-300 hover:text-pink-500 bg-white/80 p-1.5 rounded-full shadow-sm">🤍</button>
+                <div>
+                    <div class="bg-pink-50 rounded-xl h-48 mb-3 flex items-center justify-center text-4xl overflow-hidden">
+                        🎀
+                    </div>
+                    <span class="text-[11px] bg-pink-100 text-pink-600 px-2.5 py-1 rounded-md font-medium">ของตกแต่ง</span>
+                    <h4 class="font-medium text-gray-800 text-sm mt-2">พวงกุญแจลายน้องกระต่าย</h4>
+                    <p class="text-pink-500 font-bold mt-1">฿ 79</p>
+                </div>
+                <div class="flex items-center justify-between mt-4 pt-3 border-t border-gray-100">
+                    <div class="flex items-center border border-gray-200 rounded-lg overflow-hidden text-sm">
+                        <button class="px-2.5 py-1 bg-gray-50 text-gray-500 hover:bg-gray-100">-</button>
+                        <span class="px-3 py-1 text-gray-700">1</span>
+                        <button class="px-2.5 py-1 bg-gray-50 text-gray-500 hover:bg-gray-100">+</button>
+                    </div>
+                    <button class="bg-pink-400 hover:bg-pink-500 text-white text-xs px-4 py-2 rounded-xl flex items-center space-x-1 shadow-sm">
+                        <span>🛒</span> <span>เพิ่มใส่ตะกร้า</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product Item 3 -->
+            <div class="bg-white rounded-2xl p-4 border border-pink-100 shadow-sm relative flex flex-col justify-between">
+                <button class="absolute top-4 right-4 text-pink-300 hover:text-pink-500 bg-white/80 p-1.5 rounded-full shadow-sm">🤍</button>
+                <div>
+                    <div class="bg-pink-50 rounded-xl h-48 mb-3 flex items-center justify-center text-4xl overflow-hidden">
+                        ☕
+                    </div>
+                    <span class="text-[11px] bg-pink-100 text-pink-600 px-2.5 py-1 rounded-md font-medium">ของใช้ในบ้าน</span>
+                    <h4 class="font-medium text-gray-800 text-sm mt-2">แก้วน้ำลายน้องกระต่าย</h4>
+                    <p class="text-pink-500 font-bold mt-1">฿ 129</p>
+                </div>
+                <div class="flex items-center justify-between mt-4 pt-3 border-t border-gray-100">
+                    <div class="flex items-center border border-gray-200 rounded-lg overflow-hidden text-sm">
+                        <button class="px-2.5 py-1 bg-gray-50 text-gray-500 hover:bg-gray-100">-</button>
+                        <span class="px-3 py-1 text-gray-700">1</span>
+                        <button class="px-2.5 py-1 bg-gray-50 text-gray-500 hover:bg-gray-100">+</button>
+                    </div>
+                    <button class="bg-pink-400 hover:bg-pink-500 text-white text-xs px-4 py-2 rounded-xl flex items-center space-x-1 shadow-sm">
+                        <span>🛒</span> <span>เพิ่มใส่ตะกร้า</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product Item 4 -->
+            <div class="bg-white rounded-2xl p-4 border border-pink-100 shadow-sm relative flex flex-col justify-between">
+                <button class="absolute top-4 right-4 text-pink-300 hover:text-pink-500 bg-white/80 p-1.5 rounded-full shadow-sm">🤍</button>
+                <div>
+                    <div class="bg-pink-50 rounded-xl h-48 mb-3 flex items-center justify-center text-4xl overflow-hidden">
+                        👜
+                    </div>
+                    <span class="text-[11px] bg-pink-100 text-pink-600 px-2.5 py-1 rounded-md font-medium">กระเป๋า</span>
+                    <h4 class="font-medium text-gray-800 text-sm mt-2">กระเป๋าผ้าลายน้องกระต่าย</h4>
+                    <p class="text-pink-500 font-bold mt-1">฿ 159</p>
+                </div>
+                <div class="flex items-center justify-between mt-4 pt-3 border-t border-gray-100">
+                    <div class="flex items-center border border-gray-200 rounded-lg overflow-hidden text-sm">
+                        <button class="px-2.5 py-1 bg-gray-50 text-gray-500 hover:bg-gray-100">-</button>
+                        <span class="px-3 py-1 text-gray-700">1</span>
+                        <button class="px-2.5 py-1 bg-gray-50 text-gray-500 hover:bg-gray-100">+</button>
+                    </div>
+                    <button class="bg-pink-400 hover:bg-pink-500 text-white text-xs px-4 py-2 rounded-xl flex items-center space-x-1 shadow-sm">
+                        <span>🛒</span> <span>เพิ่มใส่ตะกร้า</span>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-12 bg-pink-100/50 py-6 border-t border-pink-200 text-center">
+        <div class="flex items-center justify-center space-x-2 text-pink-500 font-semibold text-sm">
+            <span>♥</span>
+            <span>Miori Shop</span>
+            <span>♥</span>
+        </div>
+        <p class="text-xs text-gray-500 mt-1">ขอบคุณที่แวะมาอุดหนุนร้านของเรานะคะ 🤍</p>
+    </footer>
+
+</body>
+</html>
