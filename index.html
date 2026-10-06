@@ -7,8 +7,7 @@
 <title>Miori Shop 🎀</title>
 
 <style>
-/* นำเข้าฟอนต์หรูหรา: Cormorant Garamond (หัวข้อ) และ Noto Serif Thai / Sarabun (เนื้อหา) */
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Noto+Serif+Thai:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Sarabun:wght@300;400;500;600&display=swap');
 
 * {
     box-sizing: border-box;
@@ -22,8 +21,8 @@
     --pink-light: #f9dfe5;
     --pink-soft: #fff1f4;
     --cream: #fffaf9;
-    --text: #5a464c;
-    --muted: #957881;
+    --text: #765961;
+    --muted: #a98c93;
     --white: #ffffff;
 }
 
@@ -33,8 +32,7 @@ html {
 
 body {
     min-height: 100vh;
-    /* เปลี่ยนฟอนต์หลักเป็น Noto Serif Thai ให้ความรู้สึกพรีเมียม คลาสสิก หรูหรา */
-    font-family: 'Noto Serif Thai', serif;
+    font-family: 'Sarabun', sans-serif;
     background:
         radial-gradient(circle at 10% 10%, #ffe3ea 0 3px, transparent 4px),
         radial-gradient(circle at 90% 25%, #f9d8e0 0 2px, transparent 3px),
@@ -189,27 +187,24 @@ body {
 
 .shop-name {
     margin-top: 13px;
-    font-size: 30px; /* ขยายใหญ่ขึ้นนิดหน่อยให้ดูเด่น */
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
     line-height: 1.25;
     font-weight: 600;
-    /* ใช้ฟอนต์อังกฤษสไตล์หรูหราผสมกับฟอนต์ไทย */
-    font-family: 'Cormorant Garamond', 'Noto Serif Thai', serif;
     letter-spacing: 0.5px;
-    color: #6a424e;
+    color: #794f59;
 }
 
 .shop-name span {
-    color: #c9758c;
-    font-weight: 500;
+    color: #d4869b;
 }
 
 .shop-desc {
-    margin: 9px auto 0;
+    margin: 7px auto 0;
     max-width: 330px;
-    font-size: 13px;
+    font-size: 14px;
     line-height: 1.8;
     color: var(--muted);
-    font-weight: 300;
 }
 
 /* =========================
@@ -254,13 +249,13 @@ body {
     background:
         linear-gradient(
             135deg,
-            #e29aa9,
-            #c9758c
+            #e9a2b3,
+            #d77f98
         );
 
     color: white;
 
-    font-family: 'Noto Serif Thai', serif;
+    font-family: 'Sarabun', sans-serif;
     font-size: 15px;
     font-weight: 500;
     letter-spacing: 0.5px;
@@ -286,6 +281,8 @@ body {
 
 .enter-button .arrow {
     float: right;
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
 }
 
 /* =========================
@@ -316,15 +313,14 @@ body {
 }
 
 .feature-icon {
-    font-size: 21px;
+    font-size: 20px;
     margin-bottom: 4px;
 }
 
 .feature-title {
-    font-size: 11px;
+    font-size: 12px;
     color: #8c6870;
     line-height: 1.6;
-    font-weight: 300;
 }
 
 /* =========================
@@ -337,17 +333,16 @@ body {
 }
 
 .thank-title {
-    color: #c9758c;
-    font-size: 18px;
-    font-family: 'Cormorant Garamond', 'Noto Serif Thai', serif;
-    letter-spacing: 1px;
+    color: #d7899d;
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    letter-spacing: 0.5px;
 }
 
 .thank-text {
     color: #b79ca3;
     font-size: 11px;
     margin-top: 3px;
-    font-weight: 300;
 }
 
 /* =========================
@@ -375,26 +370,25 @@ body {
     background: transparent;
 
     color: #9c717b;
-    font-family: 'Noto Serif Thai', serif;
+    font-family: 'Sarabun', sans-serif;
     font-size: 13px;
 
     cursor: pointer;
 }
 
 .payment-title {
-    color: #6a424e;
+    color: #774e58;
+    font-family: 'Playfair Display', serif;
     font-size: 28px;
     font-weight: 600;
-    font-family: 'Cormorant Garamond', 'Noto Serif Thai', serif;
     letter-spacing: 0.5px;
 }
 
 .payment-subtitle {
     margin-top: 5px;
     color: #a88c93;
-    font-size: 12px;
+    font-size: 13px;
     line-height: 1.7;
-    font-weight: 300;
 }
 
 /* =========================
@@ -418,11 +412,10 @@ body {
     justify-content: center;
     gap: 8px;
 
-    color: #724c57;
+    color: #815762;
     font-size: 20px;
-    font-weight: 500;
-    /* ใช้ฟอนต์หัวเรื่องหรูหราพิเศษ */
-    font-family: 'Cormorant Garamond', 'Playfair Display', serif;
+    font-weight: 600;
+    font-family: 'Playfair Display', serif;
     letter-spacing: 1px;
 
     padding-bottom: 12px;
@@ -431,7 +424,8 @@ body {
 
 .card-title .heart {
     color: #df8da2;
-    font-family: 'Noto Serif Thai', serif;
+    font-family: 'Sarabun', sans-serif;
+    font-size: 14px;
 }
 
 /* Bank logo */
@@ -464,7 +458,7 @@ body {
 
 .bank-name {
     font-size: 14px;
-    color: #6a4952;
+    color: #765760;
     font-weight: 500;
 }
 
@@ -472,8 +466,9 @@ body {
     display: block;
     margin-top: 2px;
     color: #b1959b;
-    font-size: 11px;
-    font-weight: 300;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 13px;
+    letter-spacing: 0.5px;
 }
 
 /* Account */
@@ -500,15 +495,22 @@ body {
 
 .account-label {
     color: #b08f97;
-    font-size: 11px;
-    font-weight: 300;
+    font-size: 12px;
 }
 
 .account-value {
-    color: #6a4952;
-    font-size: 13px;
+    color: #76565f;
+    font-size: 14px;
     text-align: right;
-    font-weight: 400;
+}
+
+/* เลขบัญชีและเบอร์วอเล็ทใช้ฟอนต์ Cormorant Garamond ให้ดูหรูหราพรีเมียมขึ้น + จัดระเบียบตัวเลข */
+#accountNumber, #walletNumber {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 19px;
+    letter-spacing: 1.2px;
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
 }
 
 .account-number-row {
@@ -527,11 +529,10 @@ body {
     border-radius: 10px;
     padding: 6px 10px;
 
-    font-family: 'Noto Serif Thai', serif;
-    font-size: 10px;
+    font-family: 'Sarabun', sans-serif;
+    font-size: 11px;
 
     cursor: pointer;
-    transition: .2s;
 }
 
 .copy-button:active {
@@ -571,15 +572,13 @@ body {
     font-size: 13px;
     color: #7d5a63;
     line-height: 1.7;
-    font-weight: 400;
 }
 
 .qr-info-text {
     margin-top: 4px;
-    font-size: 10px;
+    font-size: 11px;
     line-height: 1.7;
     color: #b0939a;
-    font-weight: 300;
 }
 
 /* =========================
@@ -596,11 +595,10 @@ body {
 
     background: #ffeaf0;
 
-    color: #8c6670;
+    color: #9b747d;
 
-    font-size: 11px;
+    font-size: 12px;
     line-height: 1.9;
-    font-weight: 300;
 }
 
 /* =========================
@@ -612,8 +610,8 @@ body {
     margin-top: 24px;
 
     color: #c19fa7;
-    font-size: 10px;
-    font-weight: 300;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 12px;
     letter-spacing: 0.5px;
 }
 
@@ -638,7 +636,7 @@ body {
     }
 
     .payment-title {
-        font-size: 24px;
+        font-size: 25px;
     }
 
     .qr-image {
@@ -1040,7 +1038,7 @@ body {
             </div>
 
             <!-- โน๊ตเล็กๆ ด้านล่าง -->
-            <div style="margin-top: 8px; text-align: right; font-size: 10px; color: #d98fa2;">
+            <div style="margin-top: 8px; text-align: right; font-size: 11px; color: #d98fa2;">
                 (ลืมโน๊ตโอนเพิ่ม 10.-)
             </div>
 
