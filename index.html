@@ -7,7 +7,7 @@
 <title>Miori Shop 🎀</title>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Sarabun:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Sarabun:wght@300;400;500;600;700&display=swap');
 
 * {
     box-sizing: border-box;
@@ -21,8 +21,8 @@
     --pink-light: #f9dfe5;
     --pink-soft: #fff1f4;
     --cream: #fffaf9;
-    --text: #6e4e56;
-    --muted: #9c7b84;
+    --text: #4a3239;         /* ปรับสีตัวหนังสือหลักให้เข้มคมชัดขึ้น */
+    --muted: #785760;        /* ปรับสีข้อความรองให้อ่านง่าย ไม่กลืนกับพื้นหลัง */
     --white: #ffffff;
 }
 
@@ -39,10 +39,11 @@ body {
         linear-gradient(180deg, #fff4f6 0%, #fffaf9 100%);
     background-size: 90px 90px, 120px 120px, auto;
     color: var(--text);
+    -webkit-font-smoothing: antialiased;
 }
 
 /* =========================
-   APP
+   APP CONTAINER
 ========================= */
 
 .app {
@@ -50,17 +51,17 @@ body {
     max-width: 430px;
     min-height: 100vh;
     margin: auto;
-    padding: 18px 15px 35px;
+    padding: 20px 16px 40px;
 }
 
 /* =========================
-   PAGE
+   PAGE SYSTEM
 ========================= */
 
 .page {
     display: none;
-    min-height: calc(100vh - 53px);
-    animation: pageIn .45s ease;
+    min-height: calc(100vh - 60px);
+    animation: pageIn .4s ease;
 }
 
 .page.active {
@@ -70,9 +71,8 @@ body {
 @keyframes pageIn {
     from {
         opacity: 0;
-        transform: translateY(15px);
+        transform: translateY(12px);
     }
-
     to {
         opacity: 1;
         transform: translateY(0);
@@ -91,46 +91,18 @@ body {
     opacity: .7;
 }
 
-.deco.one {
-    top: 12%;
-    left: 7%;
-    font-size: 16px;
-    animation: float 4s ease-in-out infinite;
-}
-
-.deco.two {
-    top: 25%;
-    right: 7%;
-    font-size: 20px;
-    animation: float 5s ease-in-out infinite reverse;
-}
-
-.deco.three {
-    bottom: 18%;
-    left: 9%;
-    font-size: 13px;
-    animation: float 4.5s ease-in-out infinite;
-}
-
-.deco.four {
-    bottom: 28%;
-    right: 8%;
-    font-size: 17px;
-    animation: float 5.5s ease-in-out infinite reverse;
-}
+.deco.one { top: 12%; left: 7%; font-size: 16px; animation: float 4s ease-in-out infinite; }
+.deco.two { top: 25%; right: 7%; font-size: 20px; animation: float 5s ease-in-out infinite reverse; }
+.deco.three { bottom: 18%; left: 9%; font-size: 13px; animation: float 4.5s ease-in-out infinite; }
+.deco.four { bottom: 28%; right: 8%; font-size: 17px; animation: float 5.5s ease-in-out infinite reverse; }
 
 @keyframes float {
-    0%,100% {
-        transform: translateY(0) rotate(-4deg);
-    }
-
-    50% {
-        transform: translateY(-8px) rotate(5deg);
-    }
+    0%, 100% { transform: translateY(0) rotate(-4deg); }
+    50% { transform: translateY(-8px) rotate(5deg); }
 }
 
 /* =========================
-   HOME
+   HOME PAGE
 ========================= */
 
 .home {
@@ -139,10 +111,8 @@ body {
     z-index: 1;
 }
 
-/* Logo */
-
 .logo-area {
-    padding-top: 14px;
+    padding-top: 15px;
 }
 
 .logo-frame {
@@ -157,52 +127,44 @@ body {
     object-fit: cover;
     border: 5px solid white;
     background: #f6dce2;
-    box-shadow:
-        0 0 0 2px #e8a8b7,
-        0 10px 25px rgba(190, 112, 132, .18);
+    box-shadow: 0 0 0 2px #e8a8b7, 0 10px 25px rgba(190, 112, 132, .18);
 }
 
 .logo-note {
     position: absolute;
     right: 4px;
     bottom: 4px;
-
     width: 32px;
     height: 32px;
-
     border-radius: 50%;
     border: 3px solid white;
-
     background: #d98fa2;
     color: white;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     font-size: 16px;
 }
 
-/* Shop name */
-
 .shop-name {
-    margin-top: 13px;
-    font-family: 'Cormorant Garamond', serif;
+    margin-top: 16px;
+    font-family: 'Cormorant Garamond', 'Sarabun', serif;
     font-size: 34px;
-    line-height: 1.25;
-    font-weight: 600;
+    line-height: 1.3;
+    font-weight: 700;
     letter-spacing: 0.5px;
-    color: #794f59;
+    color: #5a3842;
 }
 
 .shop-name span {
-    color: #d4869b;
+    color: #bd6a80;
 }
 
 .shop-desc {
-    margin: 7px auto 0;
+    margin: 10px auto 0;
     max-width: 330px;
-    font-size: 14px;
+    font-size: 15.5px;
+    font-weight: 400;
     line-height: 1.8;
     color: var(--muted);
 }
@@ -215,15 +177,12 @@ body {
     position: relative;
     width: 100%;
     aspect-ratio: 1122 / 495;
-    margin-top: 22px;
-    border-radius: 23px;
+    margin-top: 24px;
+    border-radius: 22px;
     overflow: hidden;
-
     background: #f7dfe4;
     border: 4px solid white;
-
-    box-shadow:
-        0 8px 25px rgba(183, 105, 125, .14);
+    box-shadow: 0 8px 25px rgba(183, 105, 125, .14);
 }
 
 .banner img {
@@ -238,41 +197,25 @@ body {
 ========================= */
 
 .enter-button {
-    width: 88%;
-    margin: 20px auto 0;
-
+    width: 90%;
+    margin: 24px auto 0;
     border: 0;
     border-radius: 999px;
-
     padding: 15px 20px;
-
-    background:
-        linear-gradient(
-            135deg,
-            #e9a2b3,
-            #d77f98
-        );
-
+    background: linear-gradient(135deg, #e9a2b3, #d77f98);
     color: white;
-
     font-family: 'Sarabun', sans-serif;
-    font-size: 15px;
-    font-weight: 500;
+    font-size: 16.5px;
+    font-weight: 600;
     letter-spacing: 0.5px;
-
     cursor: pointer;
-
-    box-shadow:
-        0 8px 18px rgba(201, 116, 138, .25),
-        inset 0 1px 0 rgba(255,255,255,.35);
-
+    box-shadow: 0 8px 18px rgba(201, 116, 138, .25), inset 0 1px 0 rgba(255,255,255,.35);
     transition: .2s;
 }
 
 .enter-button:hover {
     transform: translateY(-2px);
-    box-shadow:
-        0 11px 23px rgba(201, 116, 138, .28);
+    box-shadow: 0 11px 23px rgba(201, 116, 138, .28);
 }
 
 .enter-button:active {
@@ -282,7 +225,8 @@ body {
 .enter-button .arrow {
     float: right;
     font-family: 'Cormorant Garamond', serif;
-    font-size: 18px;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 /* =========================
@@ -292,14 +236,13 @@ body {
 .features {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-
-    margin-top: 25px;
+    margin-top: 28px;
     padding: 0 4px;
 }
 
 .feature {
     position: relative;
-    padding: 3px 8px;
+    padding: 4px 8px;
 }
 
 .feature + .feature::before {
@@ -314,13 +257,14 @@ body {
 
 .feature-icon {
     font-size: 20px;
-    margin-bottom: 4px;
+    margin-bottom: 6px;
 }
 
 .feature-title {
-    font-size: 12px;
-    color: #8c6870;
-    line-height: 1.6;
+    font-size: 14px;
+    font-weight: 500;
+    color: #724d57;
+    line-height: 1.7;
 }
 
 /* =========================
@@ -328,21 +272,24 @@ body {
 ========================= */
 
 .thank-you {
-    margin-top: 28px;
-    padding: 17px 10px 10px;
+    margin-top: 30px;
+    padding: 18px 10px 10px;
 }
 
 .thank-title {
-    color: #d7899d;
+    color: #bd6a80;
     font-family: 'Cormorant Garamond', serif;
-    font-size: 21px;
+    font-size: 23px;
+    font-weight: 600;
     letter-spacing: 0.5px;
 }
 
 .thank-text {
-    color: #b79ca3;
-    font-size: 11px;
-    margin-top: 3px;
+    color: #8c6872;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.7;
+    margin-top: 6px;
 }
 
 /* =========================
@@ -354,41 +301,42 @@ body {
     z-index: 1;
 }
 
-/* Header */
-
 .payment-header {
     text-align: center;
-    padding-top: 7px;
-    margin-bottom: 19px;
+    padding-top: 6px;
+    margin-bottom: 20px;
 }
 
 .back-button {
-    display: block;
+    display: inline-block;
     margin-bottom: 12px;
-
     border: 0;
     background: transparent;
-
-    color: #9c717b;
+    color: #785760;
     font-family: 'Sarabun', sans-serif;
-    font-size: 13px;
-
+    font-size: 14.5px;
+    font-weight: 500;
     cursor: pointer;
 }
 
+.back-button:hover {
+    color: #4a3239;
+}
+
 .payment-title {
-    color: #774e58;
-    font-family: 'Cormorant Garamond', serif;
+    color: #5a3842;
+    font-family: 'Cormorant Garamond', 'Sarabun', serif;
     font-size: 30px;
-    font-weight: 600;
+    font-weight: 700;
     letter-spacing: 0.5px;
 }
 
 .payment-subtitle {
-    margin-top: 5px;
-    color: #a88c93;
-    font-size: 13px;
-    line-height: 1.7;
+    margin-top: 6px;
+    color: #785760;
+    font-size: 14.5px;
+    font-weight: 400;
+    line-height: 1.8;
 }
 
 /* =========================
@@ -396,14 +344,12 @@ body {
 ========================= */
 
 .payment-card {
-    background: rgba(255,255,255,.94);
+    background: rgba(255,255,255,.95);
     border: 1px solid #f2d9df;
     border-radius: 22px;
-    padding: 17px;
-    margin-bottom: 15px;
-
-    box-shadow:
-        0 8px 22px rgba(177, 104, 123, .08);
+    padding: 20px;
+    margin-bottom: 16px;
+    box-shadow: 0 8px 22px rgba(177, 104, 123, .08);
 }
 
 .card-title {
@@ -411,14 +357,12 @@ body {
     align-items: center;
     justify-content: center;
     gap: 8px;
-
-    color: #815762;
+    color: #633e47;
     font-size: 20px;
     font-weight: 600;
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Cormorant Garamond', 'Sarabun', serif;
     letter-spacing: 1px;
-
-    padding-bottom: 12px;
+    padding-bottom: 14px;
     border-bottom: 1px solid #f2e0e4;
 }
 
@@ -428,26 +372,24 @@ body {
     font-size: 14px;
 }
 
-/* Bank logo */
+/* Bank brand info */
 
 .bank-brand {
     display: flex;
     align-items: center;
     gap: 12px;
-    margin-top: 15px;
+    margin-top: 18px;
 }
 
 .bank-icon {
     width: 45px;
     height: 45px;
-
     border-radius: 50%;
-
     background: #e9f3ec;
-
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-shrink: 0;
 }
 
 .bank-icon svg {
@@ -457,26 +399,26 @@ body {
 }
 
 .bank-name {
-    font-size: 14px;
-    color: #765760;
-    font-weight: 500;
+    font-size: 15.5px;
+    color: #4a3239;
+    font-weight: 600;
+    line-height: 1.5;
 }
 
 .bank-code {
     display: block;
     margin-top: 2px;
-    color: #b1959b;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 12px;
-    letter-spacing: 0.5px;
+    color: #8c6872;
+    font-family: 'Sarabun', sans-serif;
+    font-size: 13.5px;
+    font-weight: 400;
 }
 
-/* Account */
+/* Account detail box */
 
 .account-box {
-    margin-top: 13px;
-    padding: 14px;
-
+    margin-top: 14px;
+    padding: 16px;
     border-radius: 16px;
     background: #fff0f3;
 }
@@ -484,9 +426,9 @@ body {
 .account-row {
     display: flex;
     justify-content: space-between;
-    gap: 10px;
-
-    margin-bottom: 10px;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
 }
 
 .account-row:last-child {
@@ -494,50 +436,49 @@ body {
 }
 
 .account-label {
-    color: #9c7b84;
-    font-size: 13px;
-    font-weight: 400;
+    color: #785760;
+    font-size: 14px;
+    font-weight: 500;
+    white-space: nowrap;
 }
 
 .account-value {
-    color: #6e4e56;
-    font-size: 14px;
+    color: #4a3239;
+    font-size: 15.5px;
     text-align: right;
-    font-weight: 400;
+    font-weight: 500;
 }
 
-/* จัดระเบียบตัวเลขและเบอร์ให้ชัดเจน อ่านง่าย เป็นระเบียบด้วยฟอนต์ที่อ่านง่ายและ Tabular Numbers */
+/* จัดระเบียบตัวเลขและข้อความสำคัญให้อ่านง่าย ชัดเจนที่สุด */
 #accountNumber, #walletNumber, #noteText {
     font-family: 'Sarabun', sans-serif;
-    font-size: 16px;
-    letter-spacing: 0.5px;
-    font-weight: 600;
+    font-size: 16.5px;
+    letter-spacing: 1px;
+    font-weight: 700;
     font-variant-numeric: tabular-nums;
-    color: #614049;
+    color: #3b252b;
 }
 
 .account-number-row {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 8px;
+    gap: 10px;
+    width: 100%;
 }
 
 .copy-button {
     border: 1px solid #dfa1af;
     background: white;
-
-    color: #b56f80;
-
+    color: #9c4f63;
     border-radius: 10px;
-    padding: 6px 12px;
-
+    padding: 8px 14px;
     font-family: 'Sarabun', sans-serif;
-    font-size: 12px;
-    font-weight: 500;
-
+    font-size: 13px;
+    font-weight: 600;
     cursor: pointer;
     transition: background-color 0.2s;
+    white-space: nowrap;
 }
 
 .copy-button:hover {
@@ -549,7 +490,7 @@ body {
 }
 
 /* =========================
-   QR
+   QR SECTION
 ========================= */
 
 .qr-top-container {
@@ -557,38 +498,35 @@ body {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin-top: 15px;
-    padding-bottom: 15px;
+    margin-top: 16px;
+    padding-bottom: 16px;
     border-bottom: 1px solid #f2e0e4;
 }
 
 .qr-image {
     width: 145px;
     height: 145px;
-
-    padding: 7px;
-
+    padding: 8px;
     object-fit: cover;
-
     border-radius: 16px;
     border: 1px solid #edd7dc;
-
     background: white;
 }
 
 .qr-info-title {
-    margin-top: 10px;
-    font-size: 13px;
-    color: #7d5a63;
-    line-height: 1.7;
-    font-weight: 500;
+    margin-top: 12px;
+    font-size: 15px;
+    color: #5a3842;
+    font-weight: 600;
+    line-height: 1.6;
 }
 
 .qr-info-text {
-    margin-top: 4px;
-    font-size: 12px;
+    margin-top: 5px;
+    font-size: 13.5px;
     line-height: 1.7;
-    color: #9c7b84;
+    color: #785760;
+    font-weight: 400;
 }
 
 /* =========================
@@ -596,20 +534,15 @@ body {
 ========================= */
 
 .notice {
-    margin-top: 4px;
-    padding: 14px;
-
+    margin-top: 6px;
+    padding: 16px;
     text-align: center;
-
-    border-radius: 17px;
-
+    border-radius: 18px;
     background: #ffeaf0;
-
-    color: #8c636e;
-
-    font-size: 13px;
+    color: #6d424e;
+    font-size: 14px;
+    font-weight: 500;
     line-height: 1.9;
-    font-weight: 400;
 }
 
 /* =========================
@@ -618,38 +551,34 @@ body {
 
 .footer {
     text-align: center;
-    margin-top: 24px;
-
-    color: #b18c96;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 13px;
+    margin-top: 26px;
+    color: #8c6872;
+    font-family: 'Sarabun', sans-serif;
+    font-size: 13.5px;
+    font-weight: 400;
+    line-height: 1.8;
     letter-spacing: 0.5px;
 }
 
 /* =========================
-   MOBILE
+   RESPONSIVE
 ========================= */
 
 @media (max-width: 360px) {
-
     .app {
         padding-left: 12px;
         padding-right: 12px;
     }
-
     .logo {
         width: 100px;
         height: 100px;
     }
-
     .shop-name {
         font-size: 28px;
     }
-
     .payment-title {
         font-size: 26px;
     }
-
     .qr-image {
         width: 125px;
         height: 125px;
@@ -677,22 +606,14 @@ body {
 <section id="homePage" class="page active home">
 
     <div class="logo-area">
-
         <div class="logo-frame">
-
-            <!-- เปลี่ยนรูปโลโก้ตรงนี้ -->
             <img
                 class="logo"
                 src="https://placehold.co/400x400/f4d7de/9c6473?text=MIORI"
                 alt="Miori Shop"
             >
-
-            <div class="logo-note">
-                ♪
-            </div>
-
+            <div class="logo-note">♪</div>
         </div>
-
     </div>
 
 
@@ -707,87 +628,47 @@ body {
 
 
     <!-- Banner -->
-
     <div class="banner">
-
-        <!-- เปลี่ยนรูป Banner ตรงนี้ -->
         <img
             src="https://placehold.co/1122x495/f4d7de/9c6473?text=MIORI+SHOP+BANNER"
             alt="Miori Shop Banner"
         >
-
     </div>
 
 
     <!-- ปุ่มเข้าสู่หน้าการโอน -->
-
     <button
         class="enter-button"
         onclick="showPayment()"
     >
-        💳　ดูช่องทางการโอน
+        💳　ดูช่องทางการโอนเงิน
         <span class="arrow">›</span>
     </button>
 
 
     <!-- จุดเด่น -->
-
     <div class="features">
-
         <div class="feature">
-
-            <div class="feature-icon">
-                ♡
-            </div>
-
-            <div class="feature-title">
-                ใส่ใจทุกออเดอร์
-            </div>
-
+            <div class="feature-icon">♡</div>
+            <div class="feature-title">ใส่ใจทุกออเดอร์</div>
         </div>
-
-
         <div class="feature">
-
-            <div class="feature-icon">
-                ✦
-            </div>
-
-            <div class="feature-title">
-                สะดวก<br>
-                รวดเร็ว
-            </div>
-
+            <div class="feature-icon">✦</div>
+            <div class="feature-title">สะดวกรวดเร็ว</div>
         </div>
-
-
         <div class="feature">
-
-            <div class="feature-icon">
-                ♡
-            </div>
-
-            <div class="feature-title">
-                ดูแลด้วยใจ
-            </div>
-
+            <div class="feature-icon">♡</div>
+            <div class="feature-title">ดูแลด้วยใจ</div>
         </div>
-
     </div>
 
 
     <!-- Thank you -->
-
     <div class="thank-you">
-
-        <div class="thank-title">
-            ♡ Thank you ♡
-        </div>
-
+        <div class="thank-title">♡ Thank you ♡</div>
         <div class="thank-text">
             ขอบคุณที่อุดหนุน Miori Shop นะคะ 🎀
         </div>
-
     </div>
 
 </section>
@@ -800,7 +681,6 @@ body {
 <section id="paymentPage" class="page payment">
 
     <div class="payment-header">
-
         <button
             class="back-button"
             onclick="showHome()"
@@ -808,16 +688,13 @@ body {
             ← กลับหน้าหลัก
         </button>
 
-
         <h1 class="payment-title">
-            ♡ ช่องทางการโอน
+            ♡ ช่องทางการโอนเงิน
         </h1>
 
-
         <p class="payment-subtitle">
-            เลือกช่องทางที่สะดวกสำหรับการชำระเงินได้เลย
+            เลือกช่องทางที่สะดวกสำหรับการชำระเงินได้เลยค่ะ
         </p>
-
     </div>
 
 
@@ -831,7 +708,7 @@ body {
             <span class="heart">♥</span>
         </div>
 
-        <!-- QR Code ไว้ข้างบนตรงกลาง -->
+        <!-- QR Code -->
         <div class="qr-top-container">
             <img
                 class="qr-image"
@@ -842,217 +719,89 @@ body {
                 สแกน QR Code เพื่อชำระเงิน
             </div>
             <div class="qr-info-text">
-                ตรวจสอบชื่อบัญชีก่อนยืนยันการโอนทุกครั้งนะครับ ♡
+                โปรดตรวจสอบชื่อบัญชีก่อนยืนยันการโอนเงินทุกครั้งนะคะ ♡
             </div>
         </div>
 
 
         <!-- ส่วนธนาคารกสิกรไทย -->
-        <div class="bank-brand" style="margin-top: 20px;">
-
+        <div class="bank-brand">
             <div class="bank-icon">
                 <svg viewBox="0 0 24 24"><path d="M12 1L3 5v2h18V5l-9-4zM4 10h3v7H4v-7zm5 0h3v7H9v-7zm5 0h3v7h-3v-7zm5 0h3v7h-3v-7zM2 19h20v2H2v-2z"/></svg>
             </div>
-
             <div>
-
-                <div class="bank-name">
-                    ธนาคารกสิกรไทย
-                </div>
-
-                <span class="bank-code">
-                    KBank
-                </span>
-
+                <div class="bank-name">ธนาคารกสิกรไทย</div>
+                <span class="bank-code">KBank</span>
             </div>
-
         </div>
-
 
         <div class="account-box">
-
             <div class="account-row">
-
-                <span class="account-label">
-                    ชื่อบัญชี
-                </span>
-
-                <span class="account-value">
-                    นางสาว XXXXX XXXXX
-                </span>
-
+                <span class="account-label">ชื่อบัญชี</span>
+                <span class="account-value">นางสาว XXXXX XXXXX</span>
             </div>
-
-
             <div class="account-row">
-
-                <span class="account-label">
-                    เลขบัญชี
-                </span>
-
-
+                <span class="account-label">เลขบัญชี</span>
                 <div class="account-number-row">
-
-                    <span
-                        id="accountNumber"
-                        class="account-value"
-                    >
-                        123-4-56789-0
-                    </span>
-
-
-                    <button
-                        class="copy-button"
-                        onclick="copyAccount()"
-                    >
-                        ⧉ คัดลอก
-                    </button>
-
+                    <span id="accountNumber" class="account-value">123-4-56789-0</span>
+                    <button class="copy-button" onclick="copyAccount()">⧉ คัดลอก</button>
                 </div>
-
             </div>
-
         </div>
 
 
-        <!-- ส่วนวอเล็ท -->
-        <div class="bank-brand" style="margin-top: 20px;">
-
+        <!-- ส่วนทรูมันนี่ วอเล็ท -->
+        <div class="bank-brand">
             <div class="bank-icon" style="background: #eef3ff;">
                 <svg viewBox="0 0 24 24" style="fill: #5a75b3;"><path d="M21 7.28V5c0-1.1-.9-2-2-2H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-2.28c.59-.35 1-.98 1-1.72V9c0-.74-.41-1.37-1-1.72zM20 9v6h-7V9h7zM5 19V5h14v2h-6c-1.1 0-2 .9-2 2v6c0 1.1.9 2 2 2h6v2H5z"/></svg>
             </div>
-
             <div>
-
-                <div class="bank-name">
-                    TrueMoney Wallet
-                </div>
-
-                <span class="bank-code">
-                    Wallet
-                </span>
-
+                <div class="bank-name">TrueMoney Wallet</div>
+                <span class="bank-code">Wallet</span>
             </div>
-
         </div>
 
-
         <div class="account-box">
-
             <div class="account-row">
-
-                <span class="account-label">
-                    ชื่อบัญชี
-                </span>
-
-                <span class="account-value">
-                    นางสาว XXXXX XXXXX
-                </span>
-
+                <span class="account-label">ชื่อบัญชี</span>
+                <span class="account-value">นางสาว XXXXX XXXXX</span>
             </div>
-
-
             <div class="account-row">
-
-                <span class="account-label">
-                    เบอร์วอเล็ท
-                </span>
-
-
+                <span class="account-label">เบอร์วอเล็ท</span>
                 <div class="account-number-row">
-
-                    <span
-                        id="walletNumber"
-                        class="account-value"
-                    >
-                        089-XXX-XXXX
-                    </span>
-
-
-                    <button
-                        class="copy-button"
-                        onclick="copyWallet()"
-                    >
-                        ⧉ คัดลอก
-                    </button>
-
+                    <span id="walletNumber" class="account-value">089-XXX-XXXX</span>
+                    <button class="copy-button" onclick="copyWallet()">⧉ คัดลอก</button>
                 </div>
-
             </div>
-
         </div>
 
 
         <!-- โน๊ตสลิปก่อนโอนเงิน -->
-        <div class="bank-brand" style="margin-top: 20px;">
-
+        <div class="bank-brand">
             <div class="bank-icon" style="background: #fff8e6;">
                 <svg viewBox="0 0 24 24" style="fill: #b3945a;"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v-2zm-3-5V3.5L18.5 9H13z"/></svg>
             </div>
-
             <div>
-
-                <div class="bank-name">
-                    โน๊ตสลิปก่อนโอนเงิน
-                </div>
-
-                <span class="bank-code">
-                    Note for Slip
-                </span>
-
+                <div class="bank-name">โน๊ตสลิปก่อนโอนเงิน</div>
+                <span class="bank-code">Note for Slip</span>
             </div>
-
         </div>
 
-
         <div class="account-box">
-
             <div class="account-row">
-
-                <span class="account-label">
-                    ข้อความโน๊ต
-                </span>
-
-                <span class="account-value">
-                    โอนเงินให้ยัยมิ
-                </span>
-
+                <span class="account-label">ข้อความโน๊ต</span>
+                <span class="account-value">โอนเงินให้ยัยมิ</span>
             </div>
-
-
             <div class="account-row">
-
-                <span class="account-label">
-                    คัดลอกข้อความ
-                </span>
-
-
+                <span class="account-label">คัดลอกข้อความ</span>
                 <div class="account-number-row">
-
-                    <span
-                        id="noteText"
-                        class="account-value"
-                    >
-                        โอนเงินให้ยัยมิ
-                    </span>
-
-
-                    <button
-                        class="copy-button"
-                        onclick="copyNote()"
-                    >
-                        ⧉ คัดลอก
-                    </button>
-
+                    <span id="noteText" class="account-value">โอนเงินให้ยัยมิ</span>
+                    <button class="copy-button" onclick="copyNote()">⧉ คัดลอก</button>
                 </div>
-
             </div>
-
-            <!-- โน๊ตเล็กๆ ด้านล่าง -->
-            <div style="margin-top: 8px; text-align: right; font-size: 11px; color: #d98fa2;">
+            <div style="margin-top: 8px; text-align: right; font-size: 12px; color: #bd6a80; font-weight: 500;">
                 (ลืมโน๊ตโอนเพิ่ม 10.-)
             </div>
-
         </div>
 
     </div>
@@ -1061,23 +810,16 @@ body {
     <!-- ================= NOTICE ================= -->
 
     <div class="notice">
-
-        🌷 กรุณาตรวจสอบชื่อบัญชีก่อนโอนทุกครั้ง
-
+        🌷 กรุณาตรวจสอบชื่อบัญชีก่อนโอนทุกครั้งนะคะ
         <br>
-
-        หลังจากโอนเงินแล้ว
-        กรุณาส่งสลิปเพื่อแจ้งชำระเงินนะครับ ♡
-
+        หลังจากโอนเงินแล้ว สามารถส่งสลิปเพื่อแจ้งชำระเงินได้เลยค่ะ ♡
     </div>
 
 
     <div class="footer">
-
-        ♡ ขอบคุณมาก ๆ ครับ ♡
+        ♡ ขอบคุณมาก ๆ ค่ะ ♡
         <br>
         Miori Shop © 2026
-
     </div>
 
 </section>
@@ -1088,74 +830,52 @@ body {
 <script>
 
 /* ==================================================
-   เปลี่ยนหน้า
+   หน้าสลับ (Page Switching)
 ================================================== */
 
 function showPayment() {
-
-    document
-        .getElementById("homePage")
-        .classList.remove("active");
-
-    document
-        .getElementById("paymentPage")
-        .classList.add("active");
-
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
+    document.getElementById("homePage").classList.remove("active");
+    document.getElementById("paymentPage").classList.add("active");
+    window.scrollTo({ top: 0, behavior: "smooth" });
 }
-
 
 function showHome() {
-
-    document
-        .getElementById("paymentPage")
-        .classList.remove("active");
-
-    document
-        .getElementById("homePage")
-        .classList.add("active");
-
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
+    document.getElementById("paymentPage").classList.remove("active");
+    document.getElementById("homePage").classList.add("active");
+    window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
-
 /* ==================================================
-   คัดลอกข้อมูล
+   ฟังก์ชันคัดลอกข้อมูล
 ================================================== */
 
 function copyAccount() {
-    const account = document.getElementById("accountNumber").innerText.trim();
-    navigator.clipboard.writeText(account).then(() => {
-        const button = document.querySelectorAll(".copy-button")[0];
-        const original = button.innerText;
-        button.innerText = "คัดลอกแล้ว ✓";
-        setTimeout(() => { button.innerText = original; }, 1600);
+    const text = document.getElementById("accountNumber").innerText.trim();
+    navigator.clipboard.writeText(text).then(() => {
+        const btn = document.querySelectorAll(".copy-button")[0];
+        const org = btn.innerText;
+        btn.innerText = "คัดลอกแล้ว ✓";
+        setTimeout(() => { btn.innerText = org; }, 1600);
     }).catch(() => { alert("ไม่สามารถคัดลอกได้"); });
 }
 
 function copyWallet() {
-    const wallet = document.getElementById("walletNumber").innerText.trim();
-    navigator.clipboard.writeText(wallet).then(() => {
-        const button = document.querySelectorAll(".copy-button")[1];
-        const original = button.innerText;
-        button.innerText = "คัดลอกแล้ว ✓";
-        setTimeout(() => { button.innerText = original; }, 1600);
+    const text = document.getElementById("walletNumber").innerText.trim();
+    navigator.clipboard.writeText(text).then(() => {
+        const btn = document.querySelectorAll(".copy-button")[1];
+        const org = btn.innerText;
+        btn.innerText = "คัดลอกแล้ว ✓";
+        setTimeout(() => { btn.innerText = org; }, 1600);
     }).catch(() => { alert("ไม่สามารถคัดลอกได้"); });
 }
 
 function copyNote() {
-    const note = document.getElementById("noteText").innerText.trim();
-    navigator.clipboard.writeText(note).then(() => {
-        const button = document.querySelectorAll(".copy-button")[2];
-        const original = button.innerText;
-        button.innerText = "คัดลอกแล้ว ✓";
-        setTimeout(() => { button.innerText = original; }, 1600);
+    const text = document.getElementById("noteText").innerText.trim();
+    navigator.clipboard.writeText(text).then(() => {
+        const btn = document.querySelectorAll(".copy-button")[2];
+        const org = btn.innerText;
+        btn.innerText = "คัดลอกแล้ว ✓";
+        setTimeout(() => { btn.innerText = org; }, 1600);
     }).catch(() => { alert("ไม่สามารถคัดลอกได้"); });
 }
 
