@@ -7,7 +7,7 @@
 <title>Miori Shop 🎀</title>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Sarabun:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Sarabun:wght@300;400;500;600&display=swap');
 
 * {
     box-sizing: border-box;
@@ -139,8 +139,6 @@ body {
     z-index: 1;
 }
 
-/* Logo */
-
 .logo-area {
     padding-top: 14px;
 }
@@ -166,29 +164,22 @@ body {
     position: absolute;
     right: 4px;
     bottom: 4px;
-
     width: 32px;
     height: 32px;
-
     border-radius: 50%;
     border: 3px solid white;
-
     background: #d98fa2;
     color: white;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     font-size: 16px;
 }
 
-/* Shop name */
-
 .shop-name {
     margin-top: 13px;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 34px;
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
     line-height: 1.25;
     font-weight: 600;
     letter-spacing: 0.5px;
@@ -218,12 +209,9 @@ body {
     margin-top: 22px;
     border-radius: 23px;
     overflow: hidden;
-
     background: #f7dfe4;
     border: 4px solid white;
-
-    box-shadow:
-        0 8px 25px rgba(183, 105, 125, .14);
+    box-shadow: 0 8px 25px rgba(183, 105, 125, .14);
 }
 
 .banner img {
@@ -240,39 +228,23 @@ body {
 .enter-button {
     width: 88%;
     margin: 20px auto 0;
-
     border: 0;
     border-radius: 999px;
-
     padding: 15px 20px;
-
-    background:
-        linear-gradient(
-            135deg,
-            #e9a2b3,
-            #d77f98
-        );
-
+    background: linear-gradient(135deg, #e9a2b3, #d77f98);
     color: white;
-
     font-family: 'Sarabun', sans-serif;
     font-size: 15px;
     font-weight: 500;
     letter-spacing: 0.5px;
-
     cursor: pointer;
-
-    box-shadow:
-        0 8px 18px rgba(201, 116, 138, .25),
-        inset 0 1px 0 rgba(255,255,255,.35);
-
+    box-shadow: 0 8px 18px rgba(201, 116, 138, .25), inset 0 1px 0 rgba(255,255,255,.35);
     transition: .2s;
 }
 
 .enter-button:hover {
     transform: translateY(-2px);
-    box-shadow:
-        0 11px 23px rgba(201, 116, 138, .28);
+    box-shadow: 0 11px 23px rgba(201, 116, 138, .28);
 }
 
 .enter-button:active {
@@ -281,7 +253,7 @@ body {
 
 .enter-button .arrow {
     float: right;
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Playfair Display', serif;
     font-size: 18px;
 }
 
@@ -292,7 +264,6 @@ body {
 .features {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-
     margin-top: 25px;
     padding: 0 4px;
 }
@@ -334,8 +305,8 @@ body {
 
 .thank-title {
     color: #d7899d;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 21px;
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
     letter-spacing: 0.5px;
 }
 
@@ -354,8 +325,6 @@ body {
     z-index: 1;
 }
 
-/* Header */
-
 .payment-header {
     text-align: center;
     padding-top: 7px;
@@ -365,21 +334,18 @@ body {
 .back-button {
     display: block;
     margin-bottom: 12px;
-
     border: 0;
     background: transparent;
-
     color: #9c717b;
     font-family: 'Sarabun', sans-serif;
     font-size: 13px;
-
     cursor: pointer;
 }
 
 .payment-title {
     color: #774e58;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 30px;
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
     font-weight: 600;
     letter-spacing: 0.5px;
 }
@@ -401,9 +367,7 @@ body {
     border-radius: 22px;
     padding: 17px;
     margin-bottom: 15px;
-
-    box-shadow:
-        0 8px 22px rgba(177, 104, 123, .08);
+    box-shadow: 0 8px 22px rgba(177, 104, 123, .08);
 }
 
 .card-title {
@@ -411,13 +375,11 @@ body {
     align-items: center;
     justify-content: center;
     gap: 8px;
-
     color: #815762;
     font-size: 20px;
     font-weight: 600;
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Playfair Display', serif;
     letter-spacing: 1px;
-
     padding-bottom: 12px;
     border-bottom: 1px solid #f2e0e4;
 }
@@ -427,8 +389,6 @@ body {
     font-family: 'Sarabun', sans-serif;
     font-size: 14px;
 }
-
-/* Bank logo */
 
 .bank-brand {
     display: flex;
@@ -440,11 +400,8 @@ body {
 .bank-icon {
     width: 45px;
     height: 45px;
-
     border-radius: 50%;
-
     background: #e9f3ec;
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -466,17 +423,12 @@ body {
     display: block;
     margin-top: 2px;
     color: #b1959b;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 12px;
-    letter-spacing: 0.5px;
+    font-size: 13px;
 }
-
-/* Account */
 
 .account-box {
     margin-top: 13px;
     padding: 14px;
-
     border-radius: 16px;
     background: #fff0f3;
 }
@@ -485,7 +437,6 @@ body {
     display: flex;
     justify-content: space-between;
     gap: 10px;
-
     margin-bottom: 10px;
 }
 
@@ -504,12 +455,12 @@ body {
     text-align: right;
 }
 
-/* ทำให้เลขบัญชีและเบอร์ดูพรีเมียมขึ้นด้วยฟอนต์ตัวเลขสวยๆ */
+/* ใช้ฟอนต์ Sarabun และจัดระยะตัวเลขให้อ่านง่าย ชัดเจน ไม่ชิดหรือเกาะกันเกินไป */
 #accountNumber, #walletNumber {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 17px;
-    letter-spacing: 1px;
+    font-family: 'Sarabun', sans-serif;
+    font-size: 16px;
     font-weight: 600;
+    letter-spacing: 0.8px;
 }
 
 .account-number-row {
@@ -522,15 +473,11 @@ body {
 .copy-button {
     border: 1px solid #dfa1af;
     background: white;
-
     color: #b56f80;
-
     border-radius: 10px;
     padding: 6px 10px;
-
     font-family: 'Sarabun', sans-serif;
     font-size: 11px;
-
     cursor: pointer;
 }
 
@@ -555,14 +502,10 @@ body {
 .qr-image {
     width: 145px;
     height: 145px;
-
     padding: 7px;
-
     object-fit: cover;
-
     border-radius: 16px;
     border: 1px solid #edd7dc;
-
     background: white;
 }
 
@@ -587,15 +530,10 @@ body {
 .notice {
     margin-top: 4px;
     padding: 14px;
-
     text-align: center;
-
     border-radius: 17px;
-
     background: #ffeaf0;
-
     color: #9b747d;
-
     font-size: 12px;
     line-height: 1.9;
 }
@@ -607,11 +545,8 @@ body {
 .footer {
     text-align: center;
     margin-top: 24px;
-
     color: #c19fa7;
-    font-family: 'Cormorant Garamond', serif;
     font-size: 12px;
-    letter-spacing: 0.5px;
 }
 
 /* =========================
@@ -619,7 +554,6 @@ body {
 ========================= */
 
 @media (max-width: 360px) {
-
     .app {
         padding-left: 12px;
         padding-right: 12px;
@@ -631,11 +565,11 @@ body {
     }
 
     .shop-name {
-        font-size: 28px;
+        font-size: 26px;
     }
 
     .payment-title {
-        font-size: 26px;
+        font-size: 25px;
     }
 
     .qr-image {
@@ -665,50 +599,33 @@ body {
 <section id="homePage" class="page active home">
 
     <div class="logo-area">
-
         <div class="logo-frame">
-
-            <!-- เปลี่ยนรูปโลโก้ตรงนี้ -->
             <img
                 class="logo"
                 src="https://placehold.co/400x400/f4d7de/9c6473?text=MIORI"
                 alt="Miori Shop"
             >
-
-            <div class="logo-note">
-                ♪
-            </div>
-
+            <div class="logo-note">♪</div>
         </div>
-
     </div>
-
 
     <h1 class="shop-name">
         Miori <span>Shop</span> 🎀
     </h1>
 
-
     <p class="shop-desc">
         ร้านเล็ก ๆ ที่ตั้งใจทำทุกอย่างให้น่ารักและเป็นคุณ ♡
     </p>
 
-
     <!-- Banner -->
-
     <div class="banner">
-
-        <!-- เปลี่ยนรูป Banner ตรงนี้ -->
         <img
             src="https://placehold.co/1122x495/f4d7de/9c6473?text=MIORI+SHOP+BANNER"
             alt="Miori Shop Banner"
         >
-
     </div>
 
-
     <!-- ปุ่มเข้าสู่หน้าการโอน -->
-
     <button
         class="enter-button"
         onclick="showPayment()"
@@ -717,65 +634,26 @@ body {
         <span class="arrow">›</span>
     </button>
 
-
     <!-- จุดเด่น -->
-
     <div class="features">
-
         <div class="feature">
-
-            <div class="feature-icon">
-                ♡
-            </div>
-
-            <div class="feature-title">
-                ใส่ใจทุกออเดอร์
-            </div>
-
+            <div class="feature-icon">♡</div>
+            <div class="feature-title">ใส่ใจทุกออเดอร์</div>
         </div>
-
-
         <div class="feature">
-
-            <div class="feature-icon">
-                ✦
-            </div>
-
-            <div class="feature-title">
-                สะดวก<br>
-                รวดเร็ว
-            </div>
-
+            <div class="feature-icon">✦</div>
+            <div class="feature-title">สะดวก<br>รวดเร็ว</div>
         </div>
-
-
         <div class="feature">
-
-            <div class="feature-icon">
-                ♡
-            </div>
-
-            <div class="feature-title">
-                ดูแลด้วยใจ
-            </div>
-
+            <div class="feature-icon">♡</div>
+            <div class="feature-title">ดูแลด้วยใจ</div>
         </div>
-
     </div>
 
-
     <!-- Thank you -->
-
     <div class="thank-you">
-
-        <div class="thank-title">
-            ♡ Thank you ♡
-        </div>
-
-        <div class="thank-text">
-            ขอบคุณที่อุดหนุน Miori Shop นะคะ 🎀
-        </div>
-
+        <div class="thank-title">♡ Thank you ♡</div>
+        <div class="thank-text">ขอบคุณที่อุดหนุน Miori Shop นะคะ 🎀</div>
     </div>
 
 </section>
@@ -788,7 +666,6 @@ body {
 <section id="paymentPage" class="page payment">
 
     <div class="payment-header">
-
         <button
             class="back-button"
             onclick="showHome()"
@@ -796,16 +673,13 @@ body {
             ← กลับหน้าหลัก
         </button>
 
-
         <h1 class="payment-title">
             ♡ ช่องทางการโอน
         </h1>
 
-
         <p class="payment-subtitle">
             เลือกช่องทางที่สะดวกสำหรับการชำระเงินได้เลย
         </p>
-
     </div>
 
 
@@ -837,235 +711,102 @@ body {
 
         <!-- ส่วนธนาคารกสิกรไทย -->
         <div class="bank-brand" style="margin-top: 20px;">
-
             <div class="bank-icon">
                 <svg viewBox="0 0 24 24"><path d="M12 1L3 5v2h18V5l-9-4zM4 10h3v7H4v-7zm5 0h3v7H9v-7zm5 0h3v7h-3v-7zm5 0h3v7h-3v-7zM2 19h20v2H2v-2z"/></svg>
             </div>
-
             <div>
-
-                <div class="bank-name">
-                    ธนาคารกสิกรไทย
-                </div>
-
-                <span class="bank-code">
-                    KBank
-                </span>
-
+                <div class="bank-name">ธนาคารกสิกรไทย</div>
+                <span class="bank-code">KBank</span>
             </div>
-
         </div>
 
-
         <div class="account-box">
-
             <div class="account-row">
-
-                <span class="account-label">
-                    ชื่อบัญชี
-                </span>
-
-                <span class="account-value">
-                    นางสาว XXXXX XXXXX
-                </span>
-
+                <span class="account-label">ชื่อบัญชี</span>
+                <span class="account-value">นางสาว XXXXX XXXXX</span>
             </div>
 
-
             <div class="account-row">
-
-                <span class="account-label">
-                    เลขบัญชี
-                </span>
-
-
+                <span class="account-label">เลขบัญชี</span>
                 <div class="account-number-row">
-
-                    <span
-                        id="accountNumber"
-                        class="account-value"
-                    >
-                        123-4-56789-0
-                    </span>
-
-
-                    <button
-                        class="copy-button"
-                        onclick="copyAccount()"
-                    >
-                        ⧉ คัดลอก
-                    </button>
-
+                    <span id="accountNumber" class="account-value">123-4-56789-0</span>
+                    <button class="copy-button" onclick="copyAccount()">⧉ คัดลอก</button>
                 </div>
-
             </div>
-
         </div>
 
 
         <!-- ส่วนวอเล็ท -->
         <div class="bank-brand" style="margin-top: 20px;">
-
             <div class="bank-icon" style="background: #eef3ff;">
                 <svg viewBox="0 0 24 24" style="fill: #5a75b3;"><path d="M21 7.28V5c0-1.1-.9-2-2-2H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-2.28c.59-.35 1-.98 1-1.72V9c0-.74-.41-1.37-1-1.72zM20 9v6h-7V9h7zM5 19V5h14v2h-6c-1.1 0-2 .9-2 2v6c0 1.1.9 2 2 2h6v2H5z"/></svg>
             </div>
-
             <div>
-
-                <div class="bank-name">
-                    TrueMoney Wallet
-                </div>
-
-                <span class="bank-code">
-                    Wallet
-                </span>
-
+                <div class="bank-name">TrueMoney Wallet</div>
+                <span class="bank-code">Wallet</span>
             </div>
-
         </div>
 
-
         <div class="account-box">
-
             <div class="account-row">
-
-                <span class="account-label">
-                    ชื่อบัญชี
-                </span>
-
-                <span class="account-value">
-                    นางสาว XXXXX XXXXX
-                </span>
-
+                <span class="account-label">ชื่อบัญชี</span>
+                <span class="account-value">นางสาว XXXXX XXXXX</span>
             </div>
 
-
             <div class="account-row">
-
-                <span class="account-label">
-                    เบอร์วอเล็ท
-                </span>
-
-
+                <span class="account-label">เบอร์วอเล็ท</span>
                 <div class="account-number-row">
-
-                    <span
-                        id="walletNumber"
-                        class="account-value"
-                    >
-                        089-XXX-XXXX
-                    </span>
-
-
-                    <button
-                        class="copy-button"
-                        onclick="copyWallet()"
-                    >
-                        ⧉ คัดลอก
-                    </button>
-
+                    <span id="walletNumber" class="account-value">089-XXX-XXXX</span>
+                    <button class="copy-button" onclick="copyWallet()">⧉ คัดลอก</button>
                 </div>
-
             </div>
-
         </div>
 
 
         <!-- โน๊ตสลิปก่อนโอนเงิน -->
         <div class="bank-brand" style="margin-top: 20px;">
-
             <div class="bank-icon" style="background: #fff8e6;">
                 <svg viewBox="0 0 24 24" style="fill: #b3945a;"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v-2zm-3-5V3.5L18.5 9H13z"/></svg>
             </div>
-
             <div>
-
-                <div class="bank-name">
-                    โน๊ตสลิปก่อนโอนเงิน
-                </div>
-
-                <span class="bank-code">
-                    Note for Slip
-                </span>
-
+                <div class="bank-name">โน๊ตสลิปก่อนโอนเงิน</div>
+                <span class="bank-code">Note for Slip</span>
             </div>
-
         </div>
 
-
         <div class="account-box">
-
             <div class="account-row">
-
-                <span class="account-label">
-                    ข้อความโน๊ต
-                </span>
-
-                <span class="account-value">
-                    โอนเงินให้ยัยมิ
-                </span>
-
+                <span class="account-label">ข้อความโน๊ต</span>
+                <span class="account-value">โอนเงินให้ยัยมิ</span>
             </div>
 
-
             <div class="account-row">
-
-                <span class="account-label">
-                    คัดลอกข้อความ
-                </span>
-
-
+                <span class="account-label">คัดลอกข้อความ</span>
                 <div class="account-number-row">
-
-                    <span
-                        id="noteText"
-                        class="account-value"
-                    >
-                        โอนเงินให้ยัยมิ
-                    </span>
-
-
-                    <button
-                        class="copy-button"
-                        onclick="copyNote()"
-                    >
-                        ⧉ คัดลอก
-                    </button>
-
+                    <span id="noteText" class="account-value">โอนเงินให้ยัยมิ</span>
+                    <button class="copy-button" onclick="copyNote()">⧉ คัดลอก</button>
                 </div>
-
             </div>
 
-            <!-- โน๊ตเล็กๆ ด้านล่าง -->
             <div style="margin-top: 8px; text-align: right; font-size: 11px; color: #d98fa2;">
                 (ลืมโน๊ตโอนเพิ่ม 10.-)
             </div>
-
         </div>
 
     </div>
 
 
     <!-- ================= NOTICE ================= -->
-
     <div class="notice">
-
         🌷 กรุณาตรวจสอบชื่อบัญชีก่อนโอนทุกครั้ง
-
         <br>
-
-        หลังจากโอนเงินแล้ว
-        กรุณาส่งสลิปเพื่อแจ้งชำระเงินนะครับ ♡
-
+        หลังจากโอนเงินแล้ว กรุณาส่งสลิปเพื่อแจ้งชำระเงินนะครับ ♡
     </div>
 
-
     <div class="footer">
-
         ♡ ขอบคุณมาก ๆ ครับ ♡
         <br>
         Miori Shop © 2026
-
     </div>
 
 </section>
@@ -1074,48 +815,17 @@ body {
 
 
 <script>
-
-/* ==================================================
-   เปลี่ยนหน้า
-================================================== */
-
 function showPayment() {
-
-    document
-        .getElementById("homePage")
-        .classList.remove("active");
-
-    document
-        .getElementById("paymentPage")
-        .classList.add("active");
-
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
+    document.getElementById("homePage").classList.remove("active");
+    document.getElementById("paymentPage").classList.add("active");
+    window.scrollTo({ top: 0, behavior: "smooth" });
 }
-
 
 function showHome() {
-
-    document
-        .getElementById("paymentPage")
-        .classList.remove("active");
-
-    document
-        .getElementById("homePage")
-        .classList.add("active");
-
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
+    document.getElementById("paymentPage").classList.remove("active");
+    document.getElementById("homePage").classList.add("active");
+    window.scrollTo({ top: 0, behavior: "smooth" });
 }
-
-
-/* ==================================================
-   คัดลอกข้อมูล
-================================================== */
 
 function copyAccount() {
     const account = document.getElementById("accountNumber").innerText.trim();
@@ -1146,7 +856,6 @@ function copyNote() {
         setTimeout(() => { button.innerText = original; }, 1600);
     }).catch(() => { alert("ไม่สามารถคัดลอกได้"); });
 }
-
 </script>
 
 </body>
